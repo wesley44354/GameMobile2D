@@ -1,0 +1,193 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15eeebcafaf226c43bd19d296135a9df, type: 3}
+  m_Name: TileRule_Ground
+  m_EditorClassIdentifier: 
+  m_DefaultSprite: {fileID: 21300000, guid: bdad9c3ae981ed147bd72bc9fbfef1bb, type: 3}
+  m_DefaultColliderType: 1
+  m_TilingRules:
+  - m_Neighbors: 0100000001000000010000000100000001000000010000000100000001000000
+    m_Sprites:
+    - {fileID: -9119744771623628170, guid: 826a1a7b11f2f5a489172980a4d55aea, type: 3}
+    - {fileID: 2191938594237420687, guid: 826a1a7b11f2f5a489172980a4d55aea, type: 3}
+    - {fileID: -6999724768875235909, guid: 826a1a7b11f2f5a489172980a4d55aea, type: 3}
+    - {fileID: -4699935488949089943, guid: 826a1a7b11f2f5a489172980a4d55aea, type: 3}
+    - {fileID: -5446832411504745518, guid: 826a1a7b11f2f5a489172980a4d55aea, type: 3}
+    - {fileID: 6325221034391241994, guid: 826a1a7b11f2f5a489172980a4d55aea, type: 3}
+    - {fileID: 2335776488672700395, guid: 826a1a7b11f2f5a489172980a4d55aea, type: 3}
+    - {fileID: 3054426489606824333, guid: 826a1a7b11f2f5a489172980a4d55aea, type: 3}
+    - {fileID: -428181685804181366, guid: 826a1a7b11f2f5a489172980a4d55aea, type: 3}
+    m_AnimationSpeed: 1
+    m_PerlinScale: 0.1
+    m_AutoTransform: 0
+    m_Output: 1
+    m_ColliderType: 1
+  - m_Neighbors: 0100000001000000020000000100000001000000010000000100000001000000
+    m_Sprites:
+    - {fileID: -3012868704878983078, guid: 826a1a7b11f2f5a489172980a4d55aea, type: 3}
+    m_AnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_AutoTransform: 0
+    m_Output: 0
+    m_ColliderType: 1
+  - m_Neighbors: 0200000002000000020000000200000001000000020000000100000000000000
+    m_Sprites:
+    - {fileID: 5633595496526079969, guid: 826a1a7b11f2f5a489172980a4d55aea, type: 3}
+    m_AnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_AutoTransform: 0
+    m_Output: 0
+    m_ColliderType: 1
+  - m_Neighbors: 0200000002000000020000000100000002000000000000000100000002000000
+    m_Sprites:
+    - {fileID: 3775088828492989452, guid: 826a1a7b11f2f5a489172980a4d55aea, type: 3}
+    m_AnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_AutoTransform: 0
+    m_Output: 0
+    m_ColliderType: 1
+  - m_Neighbors: 0200000001000000000000000200000001000000020000000200000002000000
+    m_Sprites:
+    - {fileID: -2510928915325135585, guid: 826a1a7b11f2f5a489172980a4d55aea, type: 3}
+    m_AnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_AutoTransform: 0
+    m_Output: 0
+    m_ColliderType: 1
+  - m_Neighbors: 0000000001000000020000000100000002000000020000000200000002000000
+    m_Sprites:
+    - {fileID: 5841125812577583332, guid: 826a1a7b11f2f5a489172980a4d55aea, type: 3}
+    m_AnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_AutoTransform: 0
+    m_Output: 0
+    m_ColliderType: 1
+  - m_Neighbors: 0200000001000000000000000200000001000000020000000200000002000000
+    m_Sprites:
+    - {fileID: -2510928915325135585, guid: 826a1a7b11f2f5a489172980a4d55aea, type: 3}
+    m_AnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_AutoTransform: 0
+    m_Output: 0
+    m_ColliderType: 1
+  - m_Neighbors: 0000000002000000000000000100000001000000000000000100000000000000
+    m_Sprites:
+    - {fileID: -187251043586072471, guid: 826a1a7b11f2f5a489172980a4d55aea, type: 3}
+    m_AnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_AutoTransform: 0
+    m_Output: 0
+    m_ColliderType: 1
+  - m_Neighbors: 0000000001000000000000000100000002000000000000000100000000000000
+    m_Sprites:
+    - {fileID: -4418696415264868521, guid: 826a1a7b11f2f5a489172980a4d55aea, type: 3}
+    m_AnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_AutoTransform: 0
+    m_Output: 0
+    m_ColliderType: 1
+  - m_Neighbors: 0000000001000000000000000100000001000000000000000200000000000000
+    m_Sprites:
+    - {fileID: 2514186836580232427, guid: 826a1a7b11f2f5a489172980a4d55aea, type: 3}
+    m_AnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_AutoTransform: 0
+    m_Output: 0
+    m_ColliderType: 1
+  - m_Neighbors: 0000000001000000000000000200000001000000000000000100000000000000
+    m_Sprites:
+    - {fileID: -6089410434772780915, guid: 826a1a7b11f2f5a489172980a4d55aea, type: 3}
+    m_AnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_AutoTransform: 0
+    m_Output: 0
+    m_ColliderType: 1
+  - m_Neighbors: 0200000002000000000000000200000001000000000000000100000001000000
+    m_Sprites:
+    - {fileID: 5127945985025483818, guid: 826a1a7b11f2f5a489172980a4d55aea, type: 3}
+    m_AnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_AutoTransform: 0
+    m_Output: 0
+    m_ColliderType: 1
+  - m_Neighbors: 0100000001000000010000000100000001000000020000000100000001000000
+    m_Sprites:
+    - {fileID: 8143709045293848180, guid: 826a1a7b11f2f5a489172980a4d55aea, type: 3}
+    m_AnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_AutoTransform: 0
+    m_Output: 0
+    m_ColliderType: 1
+  - m_Neighbors: 0200000001000000010000000100000001000000010000000100000001000000
+    m_Sprites:
+    - {fileID: 5306523622356713066, guid: 826a1a7b11f2f5a489172980a4d55aea, type: 3}
+    m_AnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_AutoTransform: 0
+    m_Output: 0
+    m_ColliderType: 1
+  - m_Neighbors: 0100000001000000010000000100000001000000010000000100000002000000
+    m_Sprites:
+    - {fileID: 638278476714730106, guid: 826a1a7b11f2f5a489172980a4d55aea, type: 3}
+    m_AnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_AutoTransform: 0
+    m_Output: 0
+    m_ColliderType: 1
+  - m_Neighbors: 0000000002000000020000000100000002000000010000000100000000000000
+    m_Sprites:
+    - {fileID: 4972237907058051051, guid: 826a1a7b11f2f5a489172980a4d55aea, type: 3}
+    m_AnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_AutoTransform: 0
+    m_Output: 0
+    m_ColliderType: 1
+  - m_Neighbors: 0000000001000000010000000200000001000000020000000200000000000000
+    m_Sprites:
+    - {fileID: 3549361070262079549, guid: 826a1a7b11f2f5a489172980a4d55aea, type: 3}
+    m_AnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_AutoTransform: 0
+    m_Output: 0
+    m_ColliderType: 1
+  - m_Neighbors: 0100000001000000000000000100000002000000000000000200000002000000
+    m_Sprites:
+    - {fileID: -7474155633580668392, guid: 826a1a7b11f2f5a489172980a4d55aea, type: 3}
+    m_AnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_AutoTransform: 0
+    m_Output: 0
+    m_ColliderType: 1
+  - m_Neighbors: 0200000002000000020000000200000001000000020000000200000002000000
+    m_Sprites:
+    - {fileID: -8927948562805968812, guid: 826a1a7b11f2f5a489172980a4d55aea, type: 3}
+    m_AnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_AutoTransform: 0
+    m_Output: 0
+    m_ColliderType: 1
+  - m_Neighbors: 0000000000000000000000000100000001000000000000000000000000000000
+    m_Sprites:
+    - {fileID: -7737457102544359403, guid: 826a1a7b11f2f5a489172980a4d55aea, type: 3}
+    m_AnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_AutoTransform: 0
+    m_Output: 0
+    m_ColliderType: 1
+  - m_Neighbors: 0200000002000000020000000100000002000000020000000200000002000000
+    m_Sprites:
+    - {fileID: -3214020013887970884, guid: 826a1a7b11f2f5a489172980a4d55aea, type: 3}
+    m_AnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_AutoTransform: 0
+    m_Output: 0
+    m_ColliderType: 1
