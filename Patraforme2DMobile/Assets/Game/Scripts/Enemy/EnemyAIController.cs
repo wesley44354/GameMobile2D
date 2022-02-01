@@ -12,6 +12,9 @@ public class EnemyAIController : MonoBehaviour
 
     Vector2 movementInput;
 
+    public bool isChasing;
+
+
     public Vector2 MovementInput
     {
         get { return movementInput; }

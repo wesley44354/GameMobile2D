@@ -35,6 +35,4 @@ public class CharacterFacing2D : MonoBehaviour
     {
         return spriteRenderer.flipX == false;
     }
-
-
 }

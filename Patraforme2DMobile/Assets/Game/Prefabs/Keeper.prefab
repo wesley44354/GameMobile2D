@@ -116,8 +116,9 @@ GameObject:
   - component: {fileID: 3895311859456431385}
   - component: {fileID: 3895311859456431384}
   - component: {fileID: 3895311859456431387}
-  - component: {fileID: 3895311859456431386}
-  - component: {fileID: 3895311859456431389}
+  - component: {fileID: 1262287698}
+  - component: {fileID: 1262287691}
+  - component: {fileID: 1262287690}
   m_Layer: 0
   m_Name: Keeper
   m_TagString: Untagged
@@ -214,6 +215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63b3002d32afb3240bde30388ccf19a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isChasing: 0
 --- !u!114 &3895311859456431387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,7 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f49c16a46d93b543abd3c49e3a32c95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3895311859456431386
+--- !u!114 &1262287698
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -235,10 +237,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 3895311859456431388}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 263c6befd47b7004289dad858b6c291f, type: 3}
+  m_Script: {fileID: 11500000, guid: 251e6be25c88b7a4eaa75fa369b294ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3895311859456431389
+--- !u!114 &1262287691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3895311859456431388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c85aea6002892c49baa4309f7a421b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  visionRange: 5
+  visionAngle: 30
+  mask:
+    serializedVersion: 2
+    m_Bits: 0
+  tempTarget: {fileID: 0}
+--- !u!114 &1262287690
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -274,10 +294,16 @@ MonoBehaviour:
     - {fileID: 3895311859456431384}
     - {fileID: 3895311859456431384}
     - {fileID: 0}
+    - {fileID: 3895311859456431385}
+    - {fileID: 1262287691}
+    - {fileID: 3895311859456431388}
     objectParamsNames:
     - AIController
     - aiController
     - Target
+    - CharacterMovement
+    - AIVision
+    - target
     objectParamsLostDefaultValue: 
     layerMaskParams: []
     layerMaskParamsNames: []

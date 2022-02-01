@@ -12,6 +12,11 @@ public static class CharacterMovementAnimationKeys
     public const string VericalSpeed = "VerticalSpeed";
 }
 
+public static class EnemyMovemnetAnimationKeys
+{
+    public const string IsChasing = "IsChasing";
+}
+
 public class CharacterAnimationController : MonoBehaviour
 {
 
