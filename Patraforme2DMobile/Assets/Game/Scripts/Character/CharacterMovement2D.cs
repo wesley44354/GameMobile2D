@@ -20,7 +20,7 @@ namespace Platformer2D.Character
         [SerializeField] float dashCapsuleHeightPercent = 0.5f;
 
         [Range(1.0f, 10.0f)]
-        [SerializeField] float dashSpeed = 5.0f;
+        [SerializeField] float dashTime = 5.0f;
 
         [Range(5f, 100.0f)]
         [SerializeField] float dashForce = 5f;
@@ -159,7 +159,7 @@ namespace Platformer2D.Character
                 return;
             }
 
-            currentVelocity.x = Mathf.Lerp(transform.localPosition.x, characterFacing.IsFacing(dashForce), dashSpeed);
+            currentVelocity.x = characterFacing.IsFacingRight() ? Mathf.Lerp(transform.localPosition.x, dashForce, dashTime) : Mathf.Lerp(transform.localPosition.x, -dashForce, dashTime);
 
             isDashing = true;
 

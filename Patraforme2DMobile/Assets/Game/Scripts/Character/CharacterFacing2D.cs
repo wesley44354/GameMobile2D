@@ -26,14 +26,17 @@ public class CharacterFacing2D : MonoBehaviour
 
     public float IsFacing(float _OffsetX)
     {
-        bool isFacingRight = spriteRenderer.flipX == false;
+        bool isFacingRight = transform.rotation == Quaternion.Euler(0, 0, 0);
         float targetOffsetX = isFacingRight ? _OffsetX : -_OffsetX;
         return targetOffsetX;
     }
 
     public bool IsFacingRight()
     {
-        return spriteRenderer.flipX == false;
+        if (transform.rotation == Quaternion.Euler(0, 0, 0))
+            return true;
+
+        return false;
     }
 
 

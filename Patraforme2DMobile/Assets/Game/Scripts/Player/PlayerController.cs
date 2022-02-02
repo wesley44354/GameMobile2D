@@ -6,7 +6,7 @@ using Platformer2D.Character;
 [RequireComponent(typeof(CharacterMovement2D))]
 [RequireComponent(typeof(PlayerInput))]
 [RequireComponent(typeof(IDamageable))]
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, ICombo
 {
 
     CharacterMovement2D playerMovement;
@@ -14,7 +14,11 @@ public class PlayerController : MonoBehaviour
     PlayerInput playerInput;
     CharacterFacing2D playerFacing2D;
     IDamageable damageable;
-    IWeapon weapon;
+    public IWeapon weapon;
+
+    public int numeroCombo { get; private set; }
+
+    public float tempoCombo { get; private set; }
 
     [Header("Camera")]
     [SerializeField] private Transform cameraTarget;
@@ -72,9 +76,22 @@ public class PlayerController : MonoBehaviour
             playerMovement.Undash();
         }
 
-        if (playerInput.IsAttackButtonDown())
+
+        tempoCombo = tempoCombo + Time.deltaTime;
+        if (weapon != null && playerInput.IsAttackButtonDown() && tempoCombo > 0.5f)
         {
+            numeroCombo++;
+            if (numeroCombo > 2)
+            {
+                numeroCombo = 1;
+            }
+
+            tempoCombo = 0;
             weapon.Attack();
+        }
+        if (tempoCombo >= 1)
+        {
+            numeroCombo = 0;
         }
     }
 

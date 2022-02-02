@@ -1,16 +1,23 @@
 using UnityEngine;
 using Platformer2D.Character;
 
+[RequireComponent(typeof(IDamageable))]
+[RequireComponent(typeof(PlayerController))]
+[RequireComponent(typeof(IisAttcking))]
 public class PlayerAnimationController : CharacterAnimationController
 {
-    IDamageable damageable;
-
+    IisAttcking isAttcking;
+    PlayerController player;
 
     protected override void Awake()
     {
         base.Awake();
-        damageable = GetComponent<IDamageable>();
-        damageable.DamageEvent += OnDamage;
+        isAttcking = GetComponent<IisAttcking>();
+    }
+
+    private void Start()
+    {
+        player = GetComponent<PlayerController>();
     }
 
     protected override void Update()
@@ -19,19 +26,7 @@ public class PlayerAnimationController : CharacterAnimationController
         animator.SetBool(CharacterMovementAnimationKeys.IsDashing, characterMovement.IsDashing);
         animator.SetFloat(CharacterMovementAnimationKeys.VericalSpeed, characterMovement.CurrentVelocity.y / characterMovement.JumpSpeed);
         animator.SetBool(CharacterMovementAnimationKeys.IsGrounded, characterMovement.IsGrounded);
-    }
-
-    void OnDamage()
-    {
-        animator.SetTrigger(CharacterMovementAnimationKeys.Dead);
-    }
-
-    private void OnDestroy()
-    {
-        if(damageable != null)
-        {
-            damageable.DamageEvent -= OnDamage;
-        }
+        animator.SetBool(CharacterMovementAnimationKeys.IsAttacking + player.numeroCombo, player.weapon.IsAttcking);
     }
 
 }
