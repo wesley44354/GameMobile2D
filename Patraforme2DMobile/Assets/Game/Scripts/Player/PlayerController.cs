@@ -5,6 +5,7 @@ using Platformer2D.Character;
 
 [RequireComponent(typeof(CharacterMovement2D))]
 [RequireComponent(typeof(PlayerInput))]
+[RequireComponent(typeof(IDamageable))]
 public class PlayerController : MonoBehaviour
 {
 
@@ -12,6 +13,7 @@ public class PlayerController : MonoBehaviour
     SpriteRenderer spriteRenderer;
     PlayerInput playerInput;
     CharacterFacing2D playerFacing2D;
+    IDamageable damageable;
 
     [Header("Camera")]
     [SerializeField] private Transform cameraTarget;
@@ -30,6 +32,9 @@ public class PlayerController : MonoBehaviour
         spriteRenderer = transform.Find("GFX").GetComponent<SpriteRenderer>();
         playerInput = GetComponent<PlayerInput>();
         playerFacing2D = GetComponent<CharacterFacing2D>();
+        damageable = GetComponent<IDamageable>();
+
+        damageable.DamageEvent += OnDamage;
     }
 
     // Update is called once per frame
@@ -74,5 +79,21 @@ public class PlayerController : MonoBehaviour
         currentOffsetX += playerMovement.CurrentVelocity.x * Time.fixedDeltaTime * characterSpeedInfluence;
 
         cameraTarget.localPosition = new Vector3(currentOffsetX, cameraTarget.localPosition.y, cameraTarget.localPosition.z);
+    }
+
+
+    private void OnDamage()
+    {
+        // Morrer assim que a gente tomar qualquer dano
+        playerMovement.StopImmediately();
+        enabled = false;
+    }
+
+    private void OnDestroy()
+    {
+        if(damageable != null)
+        {
+            damageable.DamageEvent -= OnDamage;
+        }
     }
 }

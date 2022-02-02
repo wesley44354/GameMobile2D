@@ -18,6 +18,6 @@ public class KeeperAnimationController : CharacterAnimationController
     protected override void Update()
     {
         base.Update();
-        animator.SetBool(EnemyMovemnetAnimationKeys.IsChasing, aiController.isChasing);
+        animator.SetBool(EnemyMovemnetAnimationKeys.IsChasing, aiController.IsChasing);
     }
 }

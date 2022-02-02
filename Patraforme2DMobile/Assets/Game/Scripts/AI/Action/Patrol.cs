@@ -22,14 +22,12 @@ public class Patrol : BasePrimitiveAction
     public override void OnStart()
     {
         base.OnStart();
-        Debug.Log("Patrol: OnStart");
         aiController.StartCoroutine(TEMP_Walk());
         charMovement.MaxGroundSpeed = chaseSpeed;
     }
 
     public override TaskStatus OnUpdate()
     {
-        Debug.Log("Patrol: OnUpdate");
         return TaskStatus.RUNNING;
     }
 

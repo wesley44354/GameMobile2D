@@ -13,7 +13,7 @@ public class ChaseTarget : BasePrimitiveAction
 
     [InParam("AIController")]
     private EnemyAIController aiController;
-
+     
     [InParam("ChaseSpeed")]
     private float chaseSpeed = 4;
 
@@ -24,20 +24,25 @@ public class ChaseTarget : BasePrimitiveAction
     public override void OnStart()
     {
         base.OnStart();
-        aiController.isChasing = true;
+        aiController.IsChasing = true;
         charMovement.MaxGroundSpeed = chaseSpeed;
     }
 
     public override void OnAbort()
     {
         base.OnAbort();
-        aiController.isChasing = false;
+        aiController.IsChasing = false;
     }
 
     public override TaskStatus OnUpdate()
     {
+        if(target == null)
+        {
+            return TaskStatus.ABORTED;
+        }
+
         Vector2 toTarget = target.transform.position - aiController.transform.position;
-        aiController.MovementInput = new Vector2(Mathf.Sign(toTarget.x), (Mathf.Sign(toTarget.y)));
+        aiController.MovementInput = new Vector2(Mathf.Sign(toTarget.x), 0);
 
         return TaskStatus.RUNNING;
     }

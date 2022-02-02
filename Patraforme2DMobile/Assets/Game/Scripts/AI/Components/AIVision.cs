@@ -17,18 +17,11 @@ public class AIVision : MonoBehaviour
 
     CharacterFacing2D charFacing;
 
-    public GameObject tempTarget;
-
 
     private void Awake()
     {
         charFacing = GetComponent<CharacterFacing2D>();
 
-    }
-
-    private void Update()
-    {
-        Debug.Log(IsVisible(tempTarget));
     }
 
     public bool IsVisible(GameObject target)

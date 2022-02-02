@@ -21,10 +21,14 @@ public class IsTargetVisible : GOCondition
 
     public override bool Check()
     {
-        if (aiVision.IsVisible(target.gameObject))
+        if (target != null)
         {
-            forgetTargetTime = Time.time + targetMemoryDuration;
-            return true;
+            if (aiVision.IsVisible(target.gameObject))
+            {
+                forgetTargetTime = Time.time + targetMemoryDuration;
+                return true;
+            }
+
         }
         return Time.time < forgetTargetTime;
     }
