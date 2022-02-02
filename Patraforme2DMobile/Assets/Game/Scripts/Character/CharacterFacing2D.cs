@@ -15,11 +15,11 @@ public class CharacterFacing2D : MonoBehaviour
     {
         if (_movementInput.x > 0)
         {
-            spriteRenderer.flipX = false;
+            transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         else if (_movementInput.x < 0)
         {
-            spriteRenderer.flipX = true;
+            transform.rotation = Quaternion.Euler(0, 180, 0);
         }
     }
 
@@ -35,4 +35,7 @@ public class CharacterFacing2D : MonoBehaviour
     {
         return spriteRenderer.flipX == false;
     }
+
+
+
 }

@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     PlayerInput playerInput;
     CharacterFacing2D playerFacing2D;
     IDamageable damageable;
+    IWeapon weapon;
 
     [Header("Camera")]
     [SerializeField] private Transform cameraTarget;
@@ -33,6 +34,7 @@ public class PlayerController : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
         playerFacing2D = GetComponent<CharacterFacing2D>();
         damageable = GetComponent<IDamageable>();
+        weapon = GetComponentInChildren<IWeapon>(true);
 
         damageable.DamageEvent += OnDamage;
     }
@@ -68,6 +70,11 @@ public class PlayerController : MonoBehaviour
         if (playerInput.IsDashButonUp())
         {
             playerMovement.Undash();
+        }
+
+        if (playerInput.IsAttackButtonDown())
+        {
+            weapon.Attack();
         }
     }
 

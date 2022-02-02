@@ -11,6 +11,7 @@ public class PlayerInput : MonoBehaviour
         public const string Horizontal = "Horizontal";
         public const string Jump = "Jump";
         public const string Dash = "Dash";
+        public const string Attack = "Attack";
     }
 
     public Vector2 GetMovementInput()
@@ -51,5 +52,12 @@ public class PlayerInput : MonoBehaviour
         bool IsDashKeyboardButtonUp = Input.GetButton(PlayerInputConstants.Dash) == false;
         bool IsDashMobileButtonUp = CrossPlatformInputManager.GetButton(PlayerInputConstants.Dash) == false;
         return IsDashKeyboardButtonUp && IsDashMobileButtonUp;
+    }
+
+    public bool IsAttackButtonDown()
+    {
+        bool IsAttackKeyboardButtonDown = Input.GetButtonDown(PlayerInputConstants.Attack);
+        bool IsMobileKeyboardButtonDown = CrossPlatformInputManager.GetButtonDown(PlayerInputConstants.Attack);
+        return IsAttackKeyboardButtonDown || IsMobileKeyboardButtonDown;
     }
 }

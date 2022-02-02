@@ -1,5 +1,66 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1837063571
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1837063572}
+  - component: {fileID: 1837063574}
+  - component: {fileID: 1837063573}
+  m_Layer: 0
+  m_Name: TriggerDamage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1837063572
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837063571}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3895311859456431396}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &1837063574
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837063571}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.4020617, y: 0.7194793}
+  m_Size: {x: 1.021975, y: 1.423223}
+  m_Direction: 0
+--- !u!114 &1837063573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837063571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91e928c49a0ef904f93ccc7a6fa70b1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
 --- !u!1 &3895311859110591235
 GameObject:
   m_ObjectHideFlags: 0
@@ -72,7 +133,7 @@ SpriteRenderer:
   m_SortingLayerID: 652271275
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9007221444457188966, guid: 8e7c7d5fcfb73d946b7d1dfb53d77340, type: 3}
+  m_Sprite: {fileID: -6815739294338704575, guid: 8b0a252c0d049e44aad0ee6f70635a9c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -138,6 +199,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3895311859110591232}
+  - {fileID: 1837063572}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -215,7 +277,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63b3002d32afb3240bde30388ccf19a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isChasing: 0
 --- !u!114 &3895311859456431387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,10 +315,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   visionRange: 5
   visionAngle: 30
-  mask:
-    serializedVersion: 2
-    m_Bits: 0
-  tempTarget: {fileID: 0}
 --- !u!114 &1262287690
 MonoBehaviour:
   m_ObjectHideFlags: 0
