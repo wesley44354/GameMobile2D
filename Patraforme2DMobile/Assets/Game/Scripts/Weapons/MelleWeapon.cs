@@ -5,22 +5,23 @@ using UnityEngine;
 public class MelleWeapon : TriggerDamage, IWeapon
 {
 
+    public bool IsAttacking { get; private set; }
 
-    public  bool IsAttcking { get; private set; }
+    [SerializeField] protected float attackTime = 0.2f;
 
     private void Awake()
     {
         gameObject.SetActive(false);
-        IsAttcking = false;
+        IsAttacking = false;
     }
 
 
     public void Attack()
     {
-        if (!IsAttcking)
+        if (!IsAttacking)
         {
             gameObject.SetActive(true);
-            IsAttcking = true;
+            IsAttacking = true;
             StartCoroutine(PerformAttack());
         }
     }
@@ -29,6 +30,6 @@ public class MelleWeapon : TriggerDamage, IWeapon
     {
         yield return new WaitForSeconds(attackTime);
         gameObject.SetActive(false);
-        IsAttcking = false;
+        IsAttacking = false;
     }
 }

@@ -6,6 +6,7 @@ public class KeeperAnimationController : CharacterAnimationController
 {
 
     EnemyAIController aiController;
+    [SerializeField] private TriggerDamage triggerDamage;
 
 
     protected override void Awake()
@@ -20,5 +21,6 @@ public class KeeperAnimationController : CharacterAnimationController
     {
         base.Update();
         animator.SetBool(EnemyMovemnetAnimationKeys.IsChasing, aiController.IsChasing);
+        animator.SetBool(CharacterMovementAnimationKeys.IsAttacking, aiController.IsAttacking);
     }
 }

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1837063572}
   - component: {fileID: 1837063574}
-  - component: {fileID: 1837063573}
+  - component: {fileID: 549353778}
   m_Layer: 0
   m_Name: TriggerDamage
   m_TagString: Untagged
@@ -48,7 +48,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0.4020617, y: 0.7194793}
   m_Size: {x: 1.021975, y: 1.423223}
   m_Direction: 0
---- !u!114 &1837063573
+--- !u!114 &549353778
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -61,6 +61,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
+  onTriggerEnter2D: 0
 --- !u!1 &3895311859110591235
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,7 +214,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 3895311859456431388}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 455e73ed5b469e14696f59cd05ac2703, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -239,7 +240,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &3895311859456431385
 MonoBehaviour:
@@ -302,6 +303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 251e6be25c88b7a4eaa75fa369b294ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerDamage: {fileID: 549353778}
 --- !u!114 &1262287691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -314,7 +316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c85aea6002892c49baa4309f7a421b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  visionRange: 5
+  visionRange: 3
   visionAngle: 30
 --- !u!114 &1262287690
 MonoBehaviour:
@@ -339,8 +341,10 @@ MonoBehaviour:
     boolParams: 
     boolParamsNames: []
     boolParamsLostDefaultValue: 
-    floatParams: []
-    floatParamsNames: []
+    floatParams:
+    - 1
+    floatParamsNames:
+    - TimeToCheer
     floatParamsLostDefaultValue: 
     stringParams: []
     stringParamsNames: []
@@ -355,6 +359,7 @@ MonoBehaviour:
     - {fileID: 3895311859456431385}
     - {fileID: 1262287691}
     - {fileID: 3895311859456431388}
+    - {fileID: 549353778}
     objectParamsNames:
     - AIController
     - aiController
@@ -362,6 +367,7 @@ MonoBehaviour:
     - CharacterMovement
     - AIVision
     - target
+    - TriggerDamage
     objectParamsLostDefaultValue: 
     layerMaskParams: []
     layerMaskParamsNames: []

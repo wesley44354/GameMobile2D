@@ -1,7 +1,7 @@
 public interface IWeapon
 {
 
-    bool IsAttcking { get; }
+    bool IsAttacking { get; }
     void Attack();
 }
 

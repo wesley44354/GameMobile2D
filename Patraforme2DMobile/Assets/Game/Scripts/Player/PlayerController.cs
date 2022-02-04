@@ -111,6 +111,7 @@ public class PlayerController : MonoBehaviour, ICombo
         // Morrer assim que a gente tomar qualquer dano
         playerMovement.StopImmediately();
         enabled = false;
+        Destroy(gameObject);
     }
 
     private void OnDestroy()

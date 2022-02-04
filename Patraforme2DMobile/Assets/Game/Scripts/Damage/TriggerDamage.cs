@@ -6,39 +6,25 @@ public class TriggerDamage : MonoBehaviour
 {
 
     [SerializeField] [Min(0)] private int damage = 10;
-    [SerializeField] protected float attackTime = 0.2f;
+
+    public IDamageable damageable;
+    public bool onTriggerEnter2D;
 
 
-
-    private void Awake()
-    {
-        //IsAttcking = false;
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
 
-        Debug.Log("Trigger ativado: " + collision.name);
-
-        IDamageable damageable = collision.GetComponent<IDamageable>();
-
-
+        damageable = collision.GetComponent<IDamageable>();
         if(damageable != null)
-        {  
-            //if (!IsAttcking)
-            {
-                damageable.TakeDamage(10);
-                //IsAttcking = true;
-                StartCoroutine(PerformAttack());
-            }
+        {
             damageable.TakeDamage(10);
+            onTriggerEnter2D = true;
             StartCoroutine(PerformAttack());
         }
-    }
 
+    }
     private IEnumerator PerformAttack()
     {
-        yield return new WaitForSeconds(attackTime);
-        //IsAttcking = false;
+        yield return new WaitForSeconds(1);
     }
 }

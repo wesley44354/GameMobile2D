@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 1746420842}
   m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,7 +96,7 @@ MonoBehaviour:
   jumpPeakTime: 0.4
   jumpAbortDecceleration: 100
   dashCapsuleHeightPercent: 0.5
-  dashSpeed: 3
+  dashTime: 5
   dashForce: 20
   dashGroundSpeedPercent: 0
   groundedLayerMask:
@@ -370,4 +370,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
+  onTriggerEnter2D: 0
   attackTime: 0.2

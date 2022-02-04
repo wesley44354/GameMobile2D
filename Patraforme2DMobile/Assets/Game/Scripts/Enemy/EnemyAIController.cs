@@ -19,6 +19,14 @@ public class EnemyAIController : MonoBehaviour
         set => isChasing = value;
     }
 
+    private bool isAttacking;
+
+    public bool IsAttacking
+    {
+        get => isAttacking;
+        set => isAttacking = value;
+    }
+
 
     Vector2 movementInput;
     public Vector2 MovementInput
@@ -49,6 +57,7 @@ public class EnemyAIController : MonoBehaviour
     {
         enemyMovement.StopImmediately();
         enabled = false;
+        gameObject.SetActive(false);
     }
 
 
