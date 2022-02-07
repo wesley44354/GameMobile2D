@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class TriggerDamage : MonoBehaviour
 {
-
     [SerializeField] [Min(0)] private int damage = 10;
 
     public IDamageable damageable;
     public bool onTriggerEnter2D;
+
 
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -17,7 +17,6 @@ public class TriggerDamage : MonoBehaviour
         damageable = collision.GetComponent<IDamageable>();
         if(damageable != null)
         {
-            damageable.TakeDamage(10);
             onTriggerEnter2D = true;
             StartCoroutine(PerformAttack());
         }
@@ -26,5 +25,6 @@ public class TriggerDamage : MonoBehaviour
     private IEnumerator PerformAttack()
     {
         yield return new WaitForSeconds(1);
+        damageable.TakeDamage(10);
     }
 }

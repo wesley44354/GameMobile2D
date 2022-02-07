@@ -9,6 +9,9 @@ using Platformer2D.Character;
 public class PlayerController : MonoBehaviour, ICombo
 {
 
+    public const string PLAYER_ATTACK = "PlayerAttack";
+
+
     CharacterMovement2D playerMovement;
     SpriteRenderer spriteRenderer;
     PlayerInput playerInput;
@@ -88,6 +91,7 @@ public class PlayerController : MonoBehaviour, ICombo
 
             tempoCombo = 0;
             weapon.Attack();
+            AudioManager.instance.PlaySound(PLAYER_ATTACK + numeroCombo);
         }
         if (tempoCombo >= 1)
         {
