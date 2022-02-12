@@ -89,13 +89,9 @@ public class PlayerController : MonoBehaviour, ICombo
                 numeroCombo = 1;
             }
 
+            AudioManager.instance.PlaySound(PLAYER_ATTACK + numeroCombo);
             tempoCombo = 0;
             weapon.Attack();
-            AudioManager.instance.PlaySound(PLAYER_ATTACK + numeroCombo);
-        }
-        if (tempoCombo >= 1)
-        {
-            numeroCombo = 0;
         }
     }
 
@@ -112,6 +108,7 @@ public class PlayerController : MonoBehaviour, ICombo
 
     private void OnDamage()
     {
+
         // Morrer assim que a gente tomar qualquer dano
         playerMovement.StopImmediately();
         enabled = false;

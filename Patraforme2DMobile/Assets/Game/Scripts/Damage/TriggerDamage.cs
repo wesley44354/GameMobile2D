@@ -18,13 +18,14 @@ public class TriggerDamage : MonoBehaviour
         if(damageable != null)
         {
             onTriggerEnter2D = true;
+            damageable.TakeDamage(damage);
             StartCoroutine(PerformAttack());
+
         }
 
     }
     private IEnumerator PerformAttack()
     {
-        yield return new WaitForSeconds(1);
-        damageable.TakeDamage(10);
+        yield return new WaitForSeconds(1f);
     }
 }

@@ -31,8 +31,8 @@ public class EnemyAIController : MonoBehaviour
     Vector2 movementInput;
     public Vector2 MovementInput
     {
-        get => movementInput; 
-        set => movementInput = new Vector2(Mathf.Clamp(value.x, -1, 1), Mathf.Clamp(value.y, -1, 1)); 
+        get => movementInput;
+        set => movementInput = new Vector2(Mathf.Clamp(value.x, -1, 1), Mathf.Clamp(value.y, -1, 1));
     }
 
 
@@ -63,7 +63,7 @@ public class EnemyAIController : MonoBehaviour
 
     private void OnDestroy()
     {
-        if(damageable != null)
+        if (damageable != null)
         {
             damageable.DamageEvent -= OnDamage;
         }

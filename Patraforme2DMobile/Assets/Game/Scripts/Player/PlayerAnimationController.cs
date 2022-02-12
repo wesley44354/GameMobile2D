@@ -26,7 +26,8 @@ public class PlayerAnimationController : CharacterAnimationController
         animator.SetBool(CharacterMovementAnimationKeys.IsDashing, characterMovement.IsDashing);
         animator.SetFloat(CharacterMovementAnimationKeys.VericalSpeed, characterMovement.CurrentVelocity.y / characterMovement.JumpSpeed);
         animator.SetBool(CharacterMovementAnimationKeys.IsGrounded, characterMovement.IsGrounded);
-        animator.SetBool(CharacterMovementAnimationKeys.IsAttacking + player.numeroCombo, player.weapon.IsAttacking); 
+        if(player.numeroCombo == 1 || player.numeroCombo == 2)
+            animator.SetBool(CharacterMovementAnimationKeys.IsAttacking + player.numeroCombo, player.weapon.IsAttacking); 
     }
 
 }

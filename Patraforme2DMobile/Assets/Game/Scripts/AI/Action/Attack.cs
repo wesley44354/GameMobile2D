@@ -22,7 +22,7 @@ public class Attack : BasePrimitiveAction
     {
         base.OnStart();
         aiController.IsAttacking = false;
-    
+
     }
 
     public override TaskStatus OnUpdate()
@@ -34,7 +34,7 @@ public class Attack : BasePrimitiveAction
 
     private IEnumerator PerformAttack()
     {
-        if (triggerDamage.onTriggerEnter2D  && !aiController.IsAttacking)
+        if (triggerDamage.onTriggerEnter2D && !aiController.IsAttacking)
         {
             aiController.IsAttacking = true;
             yield return new WaitForSeconds(timeToCheer);
