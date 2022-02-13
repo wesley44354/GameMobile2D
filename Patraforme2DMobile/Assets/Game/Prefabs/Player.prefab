@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b9d760ac9f3c944aabfa527f273c52e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lives: 5
 --- !u!1 &2797445414033780571
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,6 +179,7 @@ GameObject:
   - component: {fileID: 2797445414033780568}
   - component: {fileID: 2797445414033780574}
   - component: {fileID: 2797445414033780569}
+  - component: {fileID: 1182338411}
   m_Layer: 6
   m_Name: GFX
   m_TagString: Untagged
@@ -269,6 +271,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1182338411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2797445414033780571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 301c34ab9c1754f4c8b4778a5c82e663, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2797445414127173871
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,6 +383,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 891f32ac2fe67bd48b8169258a35c60c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 1
   onTriggerEnter2D: 0
   attackTime: 0.2

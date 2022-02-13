@@ -9,14 +9,24 @@ public class DeathOnDamage : MonoBehaviour, IDamageable
 
     public int Lives { get => lives; }
 
+    public bool dead { get; private set; }
+
     public event Action DamageEvent;
 
+
+    private void Update()
+    {
+        Debug.Log( transform.name + lives);
+    }
 
     public void TakeDamage(int damageable)
     {
         lives -= damageable;
-        if(lives <= 0)
+        if (lives <= 0 && !dead)
+        {
             DamageEvent.Invoke();
+            dead = true;
+        }
     }
 }
 

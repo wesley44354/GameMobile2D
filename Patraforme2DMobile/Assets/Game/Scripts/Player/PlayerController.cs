@@ -91,7 +91,7 @@ public class PlayerController : MonoBehaviour, ICombo
 
             AudioManager.instance.PlaySound(PLAYER_ATTACK + numeroCombo);
             tempoCombo = 0;
-            weapon.Attack();
+               weapon.Attack();
         }
     }
 

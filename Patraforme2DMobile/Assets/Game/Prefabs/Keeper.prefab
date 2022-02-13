@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1837063572}
   - component: {fileID: 1837063574}
-  - component: {fileID: 2028858766}
+  - component: {fileID: 622261846}
   m_Layer: 0
   m_Name: TriggerDamage
   m_TagString: Untagged
@@ -48,7 +48,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0.4020617, y: 0.7194793}
   m_Size: {x: 1.021975, y: 1.423223}
   m_Direction: 0
---- !u!114 &2028858766
+--- !u!114 &622261846
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -57,12 +57,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1837063571}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 891f32ac2fe67bd48b8169258a35c60c, type: 3}
+  m_Script: {fileID: 11500000, guid: 91e928c49a0ef904f93ccc7a6fa70b1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 1
   onTriggerEnter2D: 0
-  attackTime: 0.2
 --- !u!1 &3895311859110591235
 GameObject:
   m_ObjectHideFlags: 0
@@ -74,6 +73,7 @@ GameObject:
   - component: {fileID: 3895311859110591232}
   - component: {fileID: 3895311859110591246}
   - component: {fileID: 3895311859110591233}
+  - component: {fileID: 2026794049}
   m_Layer: 0
   m_Name: GFX
   m_TagString: Untagged
@@ -165,6 +165,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2026794049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3895311859110591235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 301c34ab9c1754f4c8b4778a5c82e663, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3895311859456431388
 GameObject:
   m_ObjectHideFlags: 0
@@ -183,6 +195,7 @@ GameObject:
   - component: {fileID: 1262287691}
   - component: {fileID: 1262287690}
   - component: {fileID: 537702334}
+  - component: {fileID: 1022371341}
   m_Layer: 0
   m_Name: Keeper
   m_TagString: Untagged
@@ -280,7 +293,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63b3002d32afb3240bde30388ccf19a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
 --- !u!114 &3895311859456431387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -305,7 +317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 251e6be25c88b7a4eaa75fa369b294ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerDamage: {fileID: 2028858766}
+  triggerDamage: {fileID: 0}
 --- !u!114 &1262287691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -361,7 +373,7 @@ MonoBehaviour:
     - {fileID: 3895311859456431385}
     - {fileID: 1262287691}
     - {fileID: 3895311859456431388}
-    - {fileID: 2028858766}
+    - {fileID: 622261846}
     objectParamsNames:
     - AIController
     - aiController
@@ -410,5 +422,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b9d760ac9f3c944aabfa527f273c52e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lives: 2
+--- !u!114 &1022371341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3895311859456431388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8919a6a98fef8f4c95df2dd794c5594, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
