@@ -56,8 +56,6 @@ public class EnemyAIController : MonoBehaviour
     private void OnDamage()
     {
         enemyMovement.StopImmediately();
-        enabled = false;
-        gameObject.SetActive(false);
     }
 
 

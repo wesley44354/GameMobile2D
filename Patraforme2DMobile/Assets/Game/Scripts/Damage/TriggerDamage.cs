@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TriggerDamage : MonoBehaviour
 {
-    [SerializeField] [Min(0)] private int damage = 10;
+    [SerializeField] [Min(0)] private int damage = 1;
 
     public IDamageable damageable;
     public bool onTriggerEnter2D;

@@ -5,27 +5,18 @@ using UnityEngine;
 
 public class DeathOnDamage : MonoBehaviour, IDamageable
 {
-    public int health { get; private set; }
+    [SerializeField] private int lives;
+
+    public int Lives { get => lives; }
 
     public event Action DamageEvent;
-    public event Action AttackEvent;
 
-
-    private void Awake()
-    {
-        health = 100;
-    }
 
     public void TakeDamage(int damageable)
     {
-        health -= damageable;
-        if(health < 0)
+        lives -= damageable;
+        if(lives <= 0)
             DamageEvent.Invoke();
-    }
-
-    private void Update()
-    {
-        Debug.Log(health);
     }
 }
 
