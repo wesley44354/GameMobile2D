@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1837063574}
   - component: {fileID: 622261846}
   m_Layer: 0
-  m_Name: TriggerDamage
+  m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -193,9 +193,8 @@ GameObject:
   - component: {fileID: 3895311859456431387}
   - component: {fileID: 1262287698}
   - component: {fileID: 1262287691}
-  - component: {fileID: 1262287690}
   - component: {fileID: 537702334}
-  - component: {fileID: 1022371341}
+  - component: {fileID: 5629627827073193637}
   m_Layer: 0
   m_Name: Keeper
   m_TagString: Untagged
@@ -332,7 +331,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   visionRange: 3
   visionAngle: 30
---- !u!114 &1262287690
+--- !u!114 &537702334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3895311859456431388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b9d760ac9f3c944aabfa527f273c52e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lives: 2
+--- !u!114 &5629627827073193637
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -372,8 +384,9 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 3895311859456431385}
     - {fileID: 1262287691}
-    - {fileID: 3895311859456431388}
+    - {fileID: 0}
     - {fileID: 622261846}
+    - {fileID: 1837063571}
     objectParamsNames:
     - AIController
     - aiController
@@ -382,6 +395,7 @@ MonoBehaviour:
     - AIVision
     - target
     - TriggerDamage
+    - Weapon
     objectParamsLostDefaultValue: 
     layerMaskParams: []
     layerMaskParamsNames: []
@@ -412,28 +426,3 @@ MonoBehaviour:
     quaternionParams: []
     quaternionParamsNames: []
     quaternionParamsLostDefaultValue: 
---- !u!114 &537702334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3895311859456431388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b9d760ac9f3c944aabfa527f273c52e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lives: 2
---- !u!114 &1022371341
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3895311859456431388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8919a6a98fef8f4c95df2dd794c5594, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

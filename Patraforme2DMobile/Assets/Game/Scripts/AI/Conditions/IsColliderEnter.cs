@@ -13,7 +13,7 @@ public class IsColliderEnter : GOCondition
 
     public override bool Check()
     {
-        return triggerDamage.onTriggerEnter2D;
+        return true;
     }
 
 }
