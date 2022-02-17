@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1837063572
 Transform:
   m_ObjectHideFlags: 0
@@ -74,6 +74,8 @@ GameObject:
   - component: {fileID: 3895311859110591246}
   - component: {fileID: 3895311859110591233}
   - component: {fileID: 2026794049}
+  - component: {fileID: 7443588275067047794}
+  - component: {fileID: 7994928743591282457}
   m_Layer: 0
   m_Name: GFX
   m_TagString: Untagged
@@ -135,7 +137,7 @@ SpriteRenderer:
   m_SortingLayerID: 652271275
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6815739294338704575, guid: 8b0a252c0d049e44aad0ee6f70635a9c, type: 3}
+  m_Sprite: {fileID: 6361432402118329833, guid: 8e7c7d5fcfb73d946b7d1dfb53d77340, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -177,6 +179,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 301c34ab9c1754f4c8b4778a5c82e663, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7443588275067047794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3895311859110591235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20fcd6cac5758d94aad647f68c82572c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 1837063571}
+--- !u!114 &7994928743591282457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3895311859110591235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2195cc9023fec439e4a5b5636ded3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 1837063571}
 --- !u!1 &3895311859456431388
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,7 +344,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 251e6be25c88b7a4eaa75fa369b294ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerDamage: {fileID: 0}
 --- !u!114 &1262287691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -380,22 +407,16 @@ MonoBehaviour:
     colorParamsLostDefaultValue: 
     objectParams:
     - {fileID: 3895311859456431384}
-    - {fileID: 3895311859456431384}
     - {fileID: 0}
     - {fileID: 3895311859456431385}
     - {fileID: 1262287691}
-    - {fileID: 0}
     - {fileID: 622261846}
-    - {fileID: 1837063571}
     objectParamsNames:
     - AIController
-    - aiController
     - Target
     - CharacterMovement
     - AIVision
-    - target
     - TriggerDamage
-    - Weapon
     objectParamsLostDefaultValue: 
     layerMaskParams: []
     layerMaskParamsNames: []

@@ -6,7 +6,6 @@ public class KeeperAnimationController : CharacterAnimationController
 {
 
     EnemyAIController aiController;
-    [SerializeField] private TriggerDamage triggerDamage;
 
 
     protected override void Awake()

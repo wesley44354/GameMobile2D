@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5826275597715796749}
   - component: {fileID: -3899611568239756745}
+  - component: {fileID: 715151761}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -44,7 +45,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
+  - name: PlayerAttack1
+    clip: {fileID: 8300000, guid: 1a06e4187f9a26244a599d7850f36a7c, type: 3}
+    volume: 1
+    pitch: 0.7
+    randomVolume: 0.2
+    randomPich: 0.2
+  - name: PlayerAttack2
+    clip: {fileID: 8300000, guid: 2d9a79aa3c011da47810854732ab5707, type: 3}
+    volume: 1
+    pitch: 0.7
+    randomVolume: 0.2
+    randomPich: 0.2
+--- !u!114 &715151761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131930897790451463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb5313240e1cd84459f875856a3b5d37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

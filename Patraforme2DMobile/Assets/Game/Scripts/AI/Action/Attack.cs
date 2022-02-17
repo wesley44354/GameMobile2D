@@ -26,10 +26,8 @@ public class Attack : BasePrimitiveAction
 
     private IEnumerator PerformAttack()
     {
-        aiController.weapon.gameObject.SetActive(true);
         aiController.IsAttacking = true;
         yield return new WaitForSeconds(timeToCheer);
         aiController.IsAttacking = false;
-        aiController.weapon.gameObject.SetActive(false);
     }
 }
