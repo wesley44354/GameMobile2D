@@ -8,9 +8,6 @@ using UnityEngine;
 [RequireComponent(typeof(IDamageable))]
 public class EnemyAIController : MonoBehaviour
 {
-
-    public GameObject weapon;
-
     CharacterMovement2D enemyMovement;
     CharacterFacing2D enemyFacing;
     IDamageable damageable;

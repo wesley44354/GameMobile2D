@@ -12,10 +12,18 @@ public class Attack : BasePrimitiveAction
     [InParam("AIController")]
     private EnemyAIController aiController;
 
+    [InParam("TriggerDamage")]
+    private TriggerDamage triggerDamage;
 
     [InParam("TimeToCheer")]
     private float timeToCheer = 1f;
 
+    public override void OnStart()
+    {
+        base.OnStart();
+        aiController.IsAttacking = false;
+
+    }
 
     public override TaskStatus OnUpdate()
     {
@@ -26,10 +34,11 @@ public class Attack : BasePrimitiveAction
 
     private IEnumerator PerformAttack()
     {
-        aiController.weapon.gameObject.SetActive(true);
-        aiController.IsAttacking = true;
-        yield return new WaitForSeconds(timeToCheer);
-        aiController.IsAttacking = false;
-        aiController.weapon.gameObject.SetActive(false);
+        if (triggerDamage.onTriggerEnter2D && !aiController.IsAttacking)
+        {
+            aiController.IsAttacking = true;
+            yield return new WaitForSeconds(timeToCheer);
+            aiController.IsAttacking = false;
+        }
     }
 }

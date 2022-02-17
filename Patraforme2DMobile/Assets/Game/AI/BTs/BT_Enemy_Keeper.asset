@@ -25,8 +25,7 @@ MonoBehaviour:
     isBlackboard=\"False\" />\r\n          <entry name=\"target\" type=\"UnityEngine.GameObject\"
     isBlackboard=\"False\" />\r\n          <entry name=\"TriggerDamage\" type=\"TriggerDamage\"
     isBlackboard=\"False\" />\r\n          <entry name=\"TimeToCheer\" type=\"System.Single\"
-    isBlackboard=\"False\" value=\"0\" />\r\n          <entry name=\"Weapon\" type=\"UnityEngine.GameObject\"
-    isBlackboard=\"False\" />\r\n        </inputValues>\r\n      </inputParams>\r\n     
+    isBlackboard=\"False\" value=\"0\" />\r\n        </inputValues>\r\n      </inputParams>\r\n     
     <outputParams />\r\n      <localParams />\r\n    </BehaviorTree>\r\n    <PrioritySelectorNode
     id=\"8\">\r\n      <children>\r\n        <elem>\r\n          <GuardAndNode>\r\n           
     <guard>\r\n              <ConditionEvalNode id=\"34\" />\r\n            </guard>\r\n           
@@ -60,7 +59,7 @@ MonoBehaviour:
     name=\"CharacterMovement\" type=\"Platformer2D.Character.CharacterMovement2D\"
     isBlackboard=\"True\" blackboard=\"CharacterMovement\" />\r\n        </inputValues>\r\n     
     </inputParams>\r\n      <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n   
-    <ConditionEvalNode id=\"38\" policy=\"WAIT_UNTIL_FALSE_AND_FAIL\" name=\"Game/Perception/IsColliderEnter\">\r\n     
+    <ConditionEvalNode id=\"38\" policy=\"WAIT_UNTIL_TRUE_AND_COMPLETE\" name=\"Game/Perception/IsColliderEnter\">\r\n     
     <inputParams>\r\n        <inputValues>\r\n          <entry name=\"TriggerDamage\"
     type=\"TriggerDamage\" isBlackboard=\"True\" blackboard=\"TriggerDamage\" />\r\n       
     </inputValues>\r\n      </inputParams>\r\n      <outputParams />\r\n      <localParams
@@ -69,13 +68,12 @@ MonoBehaviour:
     type=\"EnemyAIController\" isBlackboard=\"True\" blackboard=\"aiController\"
     />\r\n          <entry name=\"TriggerDamage\" type=\"TriggerDamage\" isBlackboard=\"True\"
     blackboard=\"TriggerDamage\" />\r\n          <entry name=\"TimeToCheer\" type=\"System.Single\"
-    isBlackboard=\"True\" blackboard=\"TimeToCheer\" />\r\n          <entry name=\"Weapon\"
-    type=\"GameManager\" isBlackboard=\"True\" blackboard=\"Weapon\" />\r\n       
-    </inputValues>\r\n      </inputParams>\r\n      <outputParams />\r\n      <localParams
-    />\r\n    </ActionNode>\r\n    <ConditionEvalNode id=\"40\" policy=\"WAIT_UNTIL_TRUE_AND_COMPLETE\"
-    name=\"AlwaysTrue\">\r\n      <inputParams />\r\n      <outputParams />\r\n     
-    <localParams />\r\n    </ConditionEvalNode>\r\n    <ActionNode id=\"39\" action=\"Game/ChaseTarget\">\r\n     
-    <inputParams>\r\n        <inputValues>\r\n          <entry name=\"Target\" type=\"UnityEngine.Transform\"
+    isBlackboard=\"True\" blackboard=\"TimeToCheer\" />\r\n        </inputValues>\r\n     
+    </inputParams>\r\n      <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n   
+    <ConditionEvalNode id=\"40\" policy=\"WAIT_UNTIL_FALSE_AND_FAIL\" name=\"AlwaysTrue\">\r\n     
+    <inputParams />\r\n      <outputParams />\r\n      <localParams />\r\n    </ConditionEvalNode>\r\n   
+    <ActionNode id=\"39\" action=\"Game/ChaseTarget\">\r\n      <inputParams>\r\n       
+    <inputValues>\r\n          <entry name=\"Target\" type=\"UnityEngine.Transform\"
     isBlackboard=\"True\" blackboard=\"Target\" />\r\n          <entry name=\"AIController\"
     type=\"EnemyAIController\" isBlackboard=\"True\" blackboard=\"AIController\"
     />\r\n          <entry name=\"ChaseSpeed\" type=\"System.Single\" isBlackboard=\"False\"
@@ -99,43 +97,43 @@ MonoBehaviour:
     <ConditionEvalNode id=\"38\" />\r\n          <PrioritySelectorNode id=\"33\"
     />\r\n          <ConditionEvalNode id=\"34\" />\r\n        </nodes>\r\n     
     </_nodes>\r\n    </BehaviorTree>\r\n    <PrioritySelectorNode id=\"8\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"274.3854
-    -86.7026\" name=\"Priority Selector\" description=\"\" cardinality=\"1\" hasParent=\"False\">\r\n         
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"478.0336
+    15.7974\" name=\"Priority Selector\" description=\"\" cardinality=\"1\" hasParent=\"False\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <PrioritySelectorNode id=\"8\" />\r\n       
     </data>\r\n      </_data>\r\n    </PrioritySelectorNode>\r\n    <ConditionEvalNode
     id=\"34\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"642.6012 344.7217\" name=\"Game/Perception/IsTargetVisible\" description=\"Eval\"
+    position=\"846.2495 447.2217\" name=\"Game/Perception/IsTargetVisible\" description=\"Eval\"
     cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
     <ConditionEvalNode id=\"34\" />\r\n          <PrioritySelectorNode id=\"8\" />\r\n       
     </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n    <PrioritySelectorNode
     id=\"33\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"317.046 92.50101\" name=\"Priority Selector\" description=\"\" cardinality=\"1\"
+    position=\"520.6942 195.001\" name=\"Priority Selector\" description=\"\" cardinality=\"1\"
     hasParent=\"False\">\r\n          <BehaviorTree id=\"0\" />\r\n          <PrioritySelectorNode
     id=\"33\" />\r\n        </data>\r\n      </_data>\r\n    </PrioritySelectorNode>\r\n   
     <ConditionEvalNode id=\"16\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"False\" position=\"766.7057 779.5812\" name=\"AlwaysTrue\" description=\"Eval\"
+    selected=\"False\" position=\"970.354 882.0812\" name=\"AlwaysTrue\" description=\"Eval\"
     cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
     <ConditionEvalNode id=\"16\" />\r\n          <PrioritySelectorNode id=\"8\" />\r\n       
     </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n    <ActionNode id=\"15\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"152.704
-    89.5806\" name=\"Game/Patrol\" description=\"\" cardinality=\"0\" hasParent=\"False\">\r\n         
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"356.3522
+    192.0806\" name=\"Game/Patrol\" description=\"\" cardinality=\"0\" hasParent=\"False\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"15\" />\r\n        </data>\r\n     
     </_data>\r\n    </ActionNode>\r\n    <ConditionEvalNode id=\"38\">\r\n      <_data>\r\n       
-    <data breakpoint=\"0\" selected=\"True\" position=\"376.7509 514.0096\" name=\"Game/Perception/IsColliderEnter\"
+    <data breakpoint=\"0\" selected=\"False\" position=\"580.3992 616.5096\" name=\"Game/Perception/IsColliderEnter\"
     description=\"Eval\" cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree
     id=\"0\" />\r\n          <ConditionEvalNode id=\"38\" />\r\n          <PrioritySelectorNode
     id=\"33\" />\r\n        </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n   
-    <ActionNode id=\"37\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"223.0778 384.8257\" name=\"Game/Attack\" description=\"\" cardinality=\"0\"
+    <ActionNode id=\"37\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"True\"
+    position=\"426.726 487.3257\" name=\"Game/Attack\" description=\"\" cardinality=\"0\"
     hasParent=\"False\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ActionNode
     id=\"37\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
     <ConditionEvalNode id=\"40\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"False\" position=\"486.5177 390.7659\" name=\"AlwaysTrue\" description=\"Eval\"
+    selected=\"False\" position=\"690.166 493.2659\" name=\"AlwaysTrue\" description=\"Eval\"
     cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
     <ConditionEvalNode id=\"40\" />\r\n          <PrioritySelectorNode id=\"33\"
     />\r\n        </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n    <ActionNode
     id=\"39\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"486.5177 390.7659\" name=\"Game/ChaseTarget\" description=\"\" cardinality=\"0\"
+    position=\"690.166 493.2659\" name=\"Game/ChaseTarget\" description=\"\" cardinality=\"0\"
     hasParent=\"False\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ActionNode
     id=\"39\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n  </editorInfo>\r\n</BehaviorBricks>"
   zoom: 0.5
