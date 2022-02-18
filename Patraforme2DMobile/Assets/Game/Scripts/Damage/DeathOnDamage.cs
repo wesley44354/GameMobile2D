@@ -14,11 +14,6 @@ public class DeathOnDamage : MonoBehaviour, IDamageable
     public event Action DamageEvent;
 
 
-    private void Update()
-    {
-        Debug.Log( transform.name + lives);
-    }
-
     public void TakeDamage(int damageable)
     {
         lives -= damageable;

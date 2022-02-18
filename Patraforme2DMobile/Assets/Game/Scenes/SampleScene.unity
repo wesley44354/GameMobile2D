@@ -3161,6 +3161,18 @@ PrefabInstance:
       propertyPath: deathOnDamage
       value: 
       objectReference: {fileID: 280486324}
+    - target: {fileID: 9197210152165143485, guid: 31095b8d103d0d245bc4dd3440b9b8ff, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.6999359
+      objectReference: {fileID: 0}
+    - target: {fileID: 9197210153177910622, guid: 31095b8d103d0d245bc4dd3440b9b8ff, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 3.9999924
+      objectReference: {fileID: 0}
+    - target: {fileID: 9197210153177910622, guid: 31095b8d103d0d245bc4dd3440b9b8ff, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -2.4700165
+      objectReference: {fileID: 0}
     - target: {fileID: 9197210153657754856, guid: 31095b8d103d0d245bc4dd3440b9b8ff, type: 3}
       propertyPath: m_Name
       value: UI

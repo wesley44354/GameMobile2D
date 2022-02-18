@@ -33,7 +33,7 @@ MonoBehaviour:
     <child>\r\n              <ActionNode id=\"15\" />\r\n            </child>\r\n         
     </GuardAndNode>\r\n        </elem>\r\n      </children>\r\n      <inputParams
     />\r\n      <outputParams />\r\n      <localParams />\r\n    </PrioritySelectorNode>\r\n   
-    <ConditionEvalNode id=\"34\" policy=\"WAIT_UNTIL_FALSE_AND_FAIL\" name=\"Game/Perception/IsTargetVisible\">\r\n     
+    <ConditionEvalNode id=\"34\" policy=\"WAIT_UNTIL_TRUE_AND_COMPLETE\" name=\"Game/Perception/IsTargetVisible\">\r\n     
     <inputParams>\r\n        <inputValues>\r\n          <entry name=\"Target\" type=\"UnityEngine.Transform\"
     isBlackboard=\"True\" blackboard=\"Target\" />\r\n          <entry name=\"AIVision\"
     type=\"AIVision\" isBlackboard=\"True\" blackboard=\"AIVision\" />\r\n         
@@ -57,8 +57,10 @@ MonoBehaviour:
     name=\"CharacterMovement\" type=\"Platformer2D.Character.CharacterMovement2D\"
     isBlackboard=\"True\" blackboard=\"CharacterMovement\" />\r\n        </inputValues>\r\n     
     </inputParams>\r\n      <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n   
-    <ConditionEvalNode id=\"38\" policy=\"WAIT_UNTIL_FALSE_AND_FAIL\" name=\"AlwaysTrue\">\r\n     
-    <inputParams />\r\n      <outputParams />\r\n      <localParams />\r\n    </ConditionEvalNode>\r\n   
+    <ConditionEvalNode id=\"38\" policy=\"WAIT_UNTIL_FALSE_AND_FAIL\" name=\"Game/Perception/IsColliderEnter\">\r\n     
+    <inputParams>\r\n        <inputValues>\r\n          <entry name=\"TriggerDamage\"
+    type=\"TriggerDamage\" isBlackboard=\"False\" />\r\n        </inputValues>\r\n     
+    </inputParams>\r\n      <outputParams />\r\n      <localParams />\r\n    </ConditionEvalNode>\r\n   
     <ActionNode id=\"37\" action=\"Game/Attack\">\r\n      <inputParams>\r\n       
     <inputValues>\r\n          <entry name=\"AIController\" type=\"EnemyAIController\"
     isBlackboard=\"True\" blackboard=\"AIController\" />\r\n          <entry name=\"TriggerDamage\"
@@ -112,11 +114,11 @@ MonoBehaviour:
     cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
     <ConditionEvalNode id=\"16\" />\r\n          <PrioritySelectorNode id=\"8\" />\r\n       
     </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n    <ActionNode id=\"15\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"True\" position=\"256.704
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"256.704
     137.5806\" name=\"Game/Patrol\" description=\"\" cardinality=\"0\" hasParent=\"False\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"15\" />\r\n        </data>\r\n     
     </_data>\r\n    </ActionNode>\r\n    <ConditionEvalNode id=\"38\">\r\n      <_data>\r\n       
-    <data breakpoint=\"0\" selected=\"False\" position=\"480.7509 562.0096\" name=\"AlwaysTrue\"
+    <data breakpoint=\"0\" selected=\"False\" position=\"480.7509 562.0096\" name=\"Game/Perception/IsColliderEnter\"
     description=\"Eval\" cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree
     id=\"0\" />\r\n          <ConditionEvalNode id=\"38\" />\r\n          <PrioritySelectorNode
     id=\"33\" />\r\n        </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n   

@@ -13,6 +13,9 @@ public class EnemyAIController : MonoBehaviour
     IDamageable damageable;
 
     private bool isChasing;
+
+    public Vector2 startPosition;
+
     public bool IsChasing
     {
         get => isChasing;
@@ -39,6 +42,7 @@ public class EnemyAIController : MonoBehaviour
 
     private void Start()
     {
+        startPosition = new Vector2(transform.position.x, transform.position.y);
         enemyMovement = GetComponent<CharacterMovement2D>();
         enemyFacing = GetComponent<CharacterFacing2D>();
         damageable = GetComponent<IDamageable>();
