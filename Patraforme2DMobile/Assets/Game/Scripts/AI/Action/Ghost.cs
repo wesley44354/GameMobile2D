@@ -11,7 +11,6 @@ using UnityEngine;
 public class Ghost : BasePrimitiveAction
 {
 
-
     [InParam("AIController")]
     private EnemyAIController aiController;
 
@@ -22,6 +21,8 @@ public class Ghost : BasePrimitiveAction
     [InParam("CharacterMovement")]
     private CharacterMovement2D charMovement;
 
+    [InParam("TimeReturnStartPosition")]
+    private float timeReturnStartPosition;
 
 
 
@@ -49,7 +50,7 @@ public class Ghost : BasePrimitiveAction
         while (true)
         {
             aiController.MovementInput = new Vector2(-1, 0);
-            yield return new WaitForSeconds(5.0f);
+            yield return new WaitForSeconds(timeReturnStartPosition);
             aiController.gameObject.transform.position = aiController.startPosition;
             yield return new WaitForSeconds(1.0f);
 

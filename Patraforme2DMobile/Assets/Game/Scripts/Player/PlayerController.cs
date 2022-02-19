@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour, ICombo
         }
 
         //Dash
-        if (playerInput.IsDashButtonDown())
+        if (playerInput.IsDashButtonDown() && playerMovement.IsGrounded)
         {
             playerMovement.Dash();
         }
@@ -84,7 +84,7 @@ public class PlayerController : MonoBehaviour, ICombo
         if (weapon != null && playerInput.IsAttackButtonDown() && tempoCombo > 0.5f)
         {
             numeroCombo++;
-            if (numeroCombo > 2)
+            if (numeroCombo > 2 )
             {
                 numeroCombo = 1;
             }
