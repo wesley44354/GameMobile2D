@@ -57,10 +57,8 @@ MonoBehaviour:
     name=\"CharacterMovement\" type=\"Platformer2D.Character.CharacterMovement2D\"
     isBlackboard=\"True\" blackboard=\"CharacterMovement\" />\r\n        </inputValues>\r\n     
     </inputParams>\r\n      <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n   
-    <ConditionEvalNode id=\"38\" policy=\"WAIT_UNTIL_FALSE_AND_FAIL\" name=\"Game/Perception/IsColliderEnter\">\r\n     
-    <inputParams>\r\n        <inputValues>\r\n          <entry name=\"TriggerDamage\"
-    type=\"TriggerDamage\" isBlackboard=\"False\" />\r\n        </inputValues>\r\n     
-    </inputParams>\r\n      <outputParams />\r\n      <localParams />\r\n    </ConditionEvalNode>\r\n   
+    <ConditionEvalNode id=\"38\" policy=\"WAIT_UNTIL_FALSE_AND_FAIL\" name=\"AlwaysTrue\">\r\n     
+    <inputParams />\r\n      <outputParams />\r\n      <localParams />\r\n    </ConditionEvalNode>\r\n   
     <ActionNode id=\"37\" action=\"Game/Attack\">\r\n      <inputParams>\r\n       
     <inputValues>\r\n          <entry name=\"AIController\" type=\"EnemyAIController\"
     isBlackboard=\"True\" blackboard=\"AIController\" />\r\n          <entry name=\"TriggerDamage\"
@@ -96,43 +94,43 @@ MonoBehaviour:
     <ConditionEvalNode id=\"38\" />\r\n          <PrioritySelectorNode id=\"33\"
     />\r\n          <ConditionEvalNode id=\"34\" />\r\n        </nodes>\r\n     
     </_nodes>\r\n    </BehaviorTree>\r\n    <PrioritySelectorNode id=\"8\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"378.3854
-    -38.7026\" name=\"Priority Selector\" description=\"\" cardinality=\"1\" hasParent=\"False\">\r\n         
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"408.3854
+    133.2974\" name=\"Priority Selector\" description=\"\" cardinality=\"1\" hasParent=\"False\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <PrioritySelectorNode id=\"8\" />\r\n       
     </data>\r\n      </_data>\r\n    </PrioritySelectorNode>\r\n    <ConditionEvalNode
     id=\"34\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"746.6012 392.7217\" name=\"Game/Perception/IsTargetVisible\" description=\"Eval\"
+    position=\"776.6012 564.7217\" name=\"Game/Perception/IsTargetVisible\" description=\"Eval\"
     cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
     <ConditionEvalNode id=\"34\" />\r\n          <PrioritySelectorNode id=\"8\" />\r\n       
     </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n    <PrioritySelectorNode
     id=\"33\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"421.046 140.501\" name=\"Priority Selector\" description=\"\" cardinality=\"1\"
+    position=\"451.046 312.501\" name=\"Priority Selector\" description=\"\" cardinality=\"1\"
     hasParent=\"False\">\r\n          <BehaviorTree id=\"0\" />\r\n          <PrioritySelectorNode
     id=\"33\" />\r\n        </data>\r\n      </_data>\r\n    </PrioritySelectorNode>\r\n   
     <ConditionEvalNode id=\"16\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"False\" position=\"870.7057 827.5812\" name=\"AlwaysTrue\" description=\"Eval\"
+    selected=\"False\" position=\"900.7057 999.5812\" name=\"AlwaysTrue\" description=\"Eval\"
     cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
     <ConditionEvalNode id=\"16\" />\r\n          <PrioritySelectorNode id=\"8\" />\r\n       
     </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n    <ActionNode id=\"15\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"256.704
-    137.5806\" name=\"Game/Patrol\" description=\"\" cardinality=\"0\" hasParent=\"False\">\r\n         
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"286.704
+    309.5806\" name=\"Game/Patrol\" description=\"\" cardinality=\"0\" hasParent=\"False\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"15\" />\r\n        </data>\r\n     
     </_data>\r\n    </ActionNode>\r\n    <ConditionEvalNode id=\"38\">\r\n      <_data>\r\n       
-    <data breakpoint=\"0\" selected=\"False\" position=\"480.7509 562.0096\" name=\"Game/Perception/IsColliderEnter\"
+    <data breakpoint=\"0\" selected=\"False\" position=\"510.7509 734.0096\" name=\"AlwaysTrue\"
     description=\"Eval\" cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree
     id=\"0\" />\r\n          <ConditionEvalNode id=\"38\" />\r\n          <PrioritySelectorNode
     id=\"33\" />\r\n        </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n   
     <ActionNode id=\"37\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"327.0778 432.8257\" name=\"Game/Attack\" description=\"\" cardinality=\"0\"
+    position=\"357.0778 604.8257\" name=\"Game/Attack\" description=\"\" cardinality=\"0\"
     hasParent=\"False\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ActionNode
     id=\"37\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
     <ConditionEvalNode id=\"40\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"False\" position=\"590.5177 438.7659\" name=\"AlwaysTrue\" description=\"Eval\"
+    selected=\"False\" position=\"620.5177 610.7659\" name=\"AlwaysTrue\" description=\"Eval\"
     cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
     <ConditionEvalNode id=\"40\" />\r\n          <PrioritySelectorNode id=\"33\"
     />\r\n        </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n    <ActionNode
     id=\"39\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"590.5177 438.7659\" name=\"Game/ChaseTarget\" description=\"\" cardinality=\"0\"
+    position=\"620.5177 610.7659\" name=\"Game/ChaseTarget\" description=\"\" cardinality=\"0\"
     hasParent=\"False\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ActionNode
     id=\"39\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n  </editorInfo>\r\n</BehaviorBricks>"
   zoom: 0.5

@@ -9,6 +9,9 @@ using UnityEngine;
 [Action("Game/Attack")]
 public class Attack : BasePrimitiveAction
 {
+    private const string ENEMY_ATTACK = "EnemyAttack";
+
+
     [InParam("AIController")]
     private EnemyAIController aiController;
 
@@ -16,10 +19,15 @@ public class Attack : BasePrimitiveAction
     [InParam("TimeToCheer")]
     private float timeToCheer = 1f;
 
+    public override void OnStart()
+    {
+        aiController.StartCoroutine(PerformAttack());
+        base.OnStart();
+    }
+
 
     public override TaskStatus OnUpdate()
     {
-        aiController.StartCoroutine(PerformAttack());
         return TaskStatus.RUNNING;
     }
 
@@ -28,6 +36,7 @@ public class Attack : BasePrimitiveAction
     {
         aiController.IsAttacking = true;
         yield return new WaitForSeconds(timeToCheer);
+        AudioManager.instance.PlaySound(ENEMY_ATTACK);
         aiController.IsAttacking = false;
     }
 }
