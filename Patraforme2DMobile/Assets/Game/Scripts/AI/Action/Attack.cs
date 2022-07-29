@@ -9,34 +9,41 @@ using UnityEngine;
 [Action("Game/Attack")]
 public class Attack : BasePrimitiveAction
 {
-    private const string ENEMY_ATTACK = "EnemyAttack";
+
+
+    [InParam("Weapon")]
+    private GameObject weapon;
 
 
     [InParam("AIController")]
     private EnemyAIController aiController;
 
 
-    [InParam("TimeToCheer")]
-    private float timeToCheer = 1f;
+    [InParam("attackTime")]
+    private float attackTime = 1f;
 
     public override void OnStart()
     {
-        aiController.StartCoroutine(PerformAttack());
-        base.OnStart();
+        weapon.gameObject.SetActive(false);
+        aiController.IsAttacking = false;
+        PerformAttack();
+    }
+
+    public void PerformAttack()
+    {
+        if (!aiController.IsAttacking)
+        {
+            weapon.gameObject.SetActive(true);
+            aiController.IsAttacking = true;
+            weapon.GetComponentInParent<EnemyAIController>().StartCoroutine(PerformAttackCoroutine());
+        }
     }
 
 
-    public override TaskStatus OnUpdate()
+    private IEnumerator PerformAttackCoroutine()
     {
-        return TaskStatus.RUNNING;
-    }
-
-
-    private IEnumerator PerformAttack()
-    {
-        aiController.IsAttacking = true;
-        yield return new WaitForSeconds(timeToCheer);
-        AudioManager.instance.PlaySound(ENEMY_ATTACK);
+        yield return new WaitForSeconds(attackTime);
+        weapon.gameObject.SetActive(false);
         aiController.IsAttacking = false;
     }
 }

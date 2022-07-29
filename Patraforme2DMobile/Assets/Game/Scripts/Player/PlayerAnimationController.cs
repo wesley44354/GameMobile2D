@@ -6,14 +6,7 @@ using Platformer2D.Character;
 [RequireComponent(typeof(IisAttcking))]
 public class PlayerAnimationController : CharacterAnimationController
 {
-    IisAttcking isAttcking;
     PlayerController player;
-
-    protected override void Awake()
-    {
-        base.Awake();
-        isAttcking = GetComponent<IisAttcking>();
-    }
 
     private void Start()
     {

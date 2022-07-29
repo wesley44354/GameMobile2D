@@ -51,7 +51,7 @@ public class Ghost : BasePrimitiveAction
         {
             aiController.MovementInput = new Vector2(-1, 0);
             yield return new WaitForSeconds(timeReturnStartPosition);
-            aiController.gameObject.transform.position = aiController.startPosition;
+            aiController.gameObject.transform.position = aiController.StartPosition;
             yield return new WaitForSeconds(1.0f);
 
 

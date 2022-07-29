@@ -11,11 +11,14 @@ public class DeathOnDamage : MonoBehaviour, IDamageable
 
     public bool dead { get; private set; }
 
+
     public event Action DamageEvent;
+    public event Action TookDamageEvent;
 
 
     public void TakeDamage(int damageable)
     {
+        TookDamageEvent.Invoke();   
         lives -= damageable;
         if (lives <= 0 && !dead)
         {

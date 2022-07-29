@@ -12,6 +12,7 @@ public static class CharacterMovementAnimationKeys
     public const string VericalSpeed = "VerticalSpeed";
     public const string Dead = "Dead";
     public const string IsAttacking = "IsAttacking";
+    public const string tookDamage = "TookDamage";
 }
 
 public static class EnemyMovemnetAnimationKeys

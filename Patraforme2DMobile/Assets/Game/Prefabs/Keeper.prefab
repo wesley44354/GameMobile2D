@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1837063572}
   - component: {fileID: 1837063574}
-  - component: {fileID: 622261846}
+  - component: {fileID: 2072928781}
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
@@ -48,7 +48,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0.4020617, y: 0.7194793}
   m_Size: {x: 1.021975, y: 1.423223}
   m_Direction: 0
---- !u!114 &622261846
+--- !u!114 &2072928781
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -61,7 +61,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  onTriggerEnter2D: 0
 --- !u!1 &3895311859110591235
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,7 +224,7 @@ GameObject:
   - component: {fileID: 5629627827073193637}
   m_Layer: 0
   m_Name: Keeper
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -255,7 +254,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 3895311859456431388}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 455e73ed5b469e14696f59cd05ac2703, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -279,7 +278,7 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
@@ -407,16 +406,18 @@ MonoBehaviour:
     colorParamsLostDefaultValue: 
     objectParams:
     - {fileID: 3895311859456431384}
-    - {fileID: 0}
     - {fileID: 3895311859456431385}
+    - {fileID: 0}
     - {fileID: 1262287691}
-    - {fileID: 622261846}
+    - {fileID: 0}
+    - {fileID: 1837063571}
     objectParamsNames:
     - AIController
-    - Target
     - CharacterMovement
+    - Target
     - AIVision
     - TriggerDamage
+    - Weapon
     objectParamsLostDefaultValue: 
     layerMaskParams: []
     layerMaskParamsNames: []

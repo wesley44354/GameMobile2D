@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour, ICombo
 
     public float tempoCombo { get; private set; }
 
+    public bool tookDamage { get; private set; }
+
     [Header("Camera")]
     [SerializeField] private Transform cameraTarget;
     [Range(0.0f, 5.0f)]
@@ -44,6 +46,7 @@ public class PlayerController : MonoBehaviour, ICombo
         weapon = GetComponentInChildren<IWeapon>(true);
 
         damageable.DamageEvent += OnDamage;
+        damageable.TookDamageEvent += OnTookDamage;
     }
 
     // Update is called once per frame
@@ -110,14 +113,20 @@ public class PlayerController : MonoBehaviour, ICombo
     {
         // Morrer assim que a gente tomar qualquer dano
         playerMovement.StopImmediately();
-
     }
+
+    private void OnTookDamage()
+    {
+        tookDamage = true;
+    }
+
 
     private void OnDestroy()
     {
         if(damageable != null)
         {
             damageable.DamageEvent -= OnDamage;
+            damageable.TookDamageEvent -= OnTookDamage;
         }
     }
 }

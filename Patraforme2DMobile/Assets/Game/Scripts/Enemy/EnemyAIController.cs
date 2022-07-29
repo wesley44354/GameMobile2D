@@ -14,7 +14,14 @@ public class EnemyAIController : MonoBehaviour
 
     private bool isChasing;
 
-    public Vector2 startPosition;
+
+    private Vector2 startPosition;
+
+    public Vector2 StartPosition { get => startPosition; }
+
+    public bool tookDamage { get; private set; }
+
+    public bool onCollisionEnter2D;
 
     public bool IsChasing
     {
@@ -48,6 +55,7 @@ public class EnemyAIController : MonoBehaviour
         damageable = GetComponent<IDamageable>();
 
         damageable.DamageEvent += OnDamage;
+        damageable.TookDamageEvent += OnTookDamage;
     }
 
 
@@ -62,12 +70,30 @@ public class EnemyAIController : MonoBehaviour
         enemyMovement.StopImmediately();
     }
 
+    private void OnTookDamage()
+    {
+        tookDamage = true;
+    }
 
     private void OnDestroy()
     {
         if (damageable != null)
         {
             damageable.DamageEvent -= OnDamage;
+            damageable.TookDamageEvent -= OnTookDamage;
         }
+    }
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(tag == "Enemy")
+            onCollisionEnter2D = true;
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+                if(tag == "Enemy")
+        onCollisionEnter2D = false;
     }
 }
