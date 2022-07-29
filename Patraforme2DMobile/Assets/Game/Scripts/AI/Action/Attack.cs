@@ -34,7 +34,7 @@ public class Attack : BasePrimitiveAction
         if (!aiController.IsAttacking)
         {
             weapon.gameObject.SetActive(true);
-            aiController.IsAttacking = true;
+
             weapon.GetComponentInParent<EnemyAIController>().StartCoroutine(PerformAttackCoroutine());
         }
     }
@@ -42,6 +42,7 @@ public class Attack : BasePrimitiveAction
 
     private IEnumerator PerformAttackCoroutine()
     {
+        aiController.IsAttacking = true;
         yield return new WaitForSeconds(attackTime);
         weapon.gameObject.SetActive(false);
         aiController.IsAttacking = false;

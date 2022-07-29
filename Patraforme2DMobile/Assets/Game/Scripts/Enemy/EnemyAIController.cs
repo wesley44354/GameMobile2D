@@ -87,13 +87,19 @@ public class EnemyAIController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(tag == "Enemy")
+        if(collision.collider.tag == "Player" && !collision.collider.isTrigger)
+            onCollisionEnter2D = true;
+    }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "Player" && !collision.collider.isTrigger)
             onCollisionEnter2D = true;
     }
 
+
     private void OnCollisionExit2D(Collision2D collision)
     {
-                if(tag == "Enemy")
-        onCollisionEnter2D = false;
+        if (collision.collider.tag == "Player" && !collision.collider.isTrigger)
+            onCollisionEnter2D = false;
     }
 }
