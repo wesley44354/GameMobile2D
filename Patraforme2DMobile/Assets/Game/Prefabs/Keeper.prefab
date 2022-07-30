@@ -1,5 +1,66 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &718320728
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 718320729}
+  - component: {fileID: 718320730}
+  - component: {fileID: 718320731}
+  m_Layer: 0
+  m_Name: TriggerDamage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &718320729
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718320728}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1837063572}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &718320730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718320728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91e928c49a0ef904f93ccc7a6fa70b1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+--- !u!70 &718320731
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718320728}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.4020617, y: 0.7194793}
+  m_Size: {x: 1.021975, y: 1.423223}
+  m_Direction: 0
 --- !u!1 &1837063571
 GameObject:
   m_ObjectHideFlags: 0
@@ -9,8 +70,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1837063572}
-  - component: {fileID: 1837063574}
-  - component: {fileID: 2072928781}
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
@@ -28,39 +87,11 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 718320729}
   m_Father: {fileID: 3895311859456431396}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!70 &1837063574
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1837063571}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.4020617, y: 0.7194793}
-  m_Size: {x: 1.021975, y: 1.423223}
-  m_Direction: 0
---- !u!114 &2072928781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1837063571}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91e928c49a0ef904f93ccc7a6fa70b1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
 --- !u!1 &3895311859110591235
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,7 +252,7 @@ GameObject:
   - component: {fileID: 1262287698}
   - component: {fileID: 1262287691}
   - component: {fileID: 537702334}
-  - component: {fileID: 5629627827073193637}
+  - component: {fileID: 768991790}
   m_Layer: 0
   m_Name: Keeper
   m_TagString: Enemy
@@ -319,6 +350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63b3002d32afb3240bde30388ccf19a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onCollisionEnter2D: 0
 --- !u!114 &3895311859456431387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -370,7 +402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives: 2
---- !u!114 &5629627827073193637
+--- !u!114 &768991790
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -394,9 +426,11 @@ MonoBehaviour:
     boolParamsNames: []
     boolParamsLostDefaultValue: 
     floatParams:
-    - 1
+    - 1.7
+    - 0.85
     floatParamsNames:
     - TimeToCheer
+    - attackTime
     floatParamsLostDefaultValue: 
     stringParams: []
     stringParamsNames: []
@@ -406,15 +440,15 @@ MonoBehaviour:
     colorParamsLostDefaultValue: 
     objectParams:
     - {fileID: 3895311859456431384}
+    - {fileID: 0}
     - {fileID: 3895311859456431385}
-    - {fileID: 0}
     - {fileID: 1262287691}
-    - {fileID: 0}
+    - {fileID: 718320728}
     - {fileID: 1837063571}
     objectParamsNames:
     - AIController
-    - CharacterMovement
     - Target
+    - CharacterMovement
     - AIVision
     - TriggerDamage
     - Weapon

@@ -11,6 +11,9 @@ public class Attack : BasePrimitiveAction
 {
 
 
+    [InParam("TriggerDamage")]
+    private GameObject triggerDamage;
+
     [InParam("Weapon")]
     private GameObject weapon;
 
@@ -20,10 +23,11 @@ public class Attack : BasePrimitiveAction
 
 
     [InParam("attackTime")]
-    private float attackTime = 1f;
+    private float attackTime;
 
     public override void OnStart()
     {
+        triggerDamage.gameObject.SetActive(false);
         weapon.gameObject.SetActive(false);
         aiController.IsAttacking = false;
         PerformAttack();
@@ -33,17 +37,19 @@ public class Attack : BasePrimitiveAction
     {
         if (!aiController.IsAttacking)
         {
-            weapon.gameObject.SetActive(true);
-
-            weapon.GetComponentInParent<EnemyAIController>().StartCoroutine(PerformAttackCoroutine());
+            aiController.StartCoroutine(PerformAttackCoroutine());
         }
     }
 
 
     private IEnumerator PerformAttackCoroutine()
     {
+        weapon.gameObject.SetActive(true);
         aiController.IsAttacking = true;
         yield return new WaitForSeconds(attackTime);
+        triggerDamage.gameObject.SetActive(true);
+        yield return new WaitForSeconds(attackTime);
+        triggerDamage.gameObject.SetActive(false);
         weapon.gameObject.SetActive(false);
         aiController.IsAttacking = false;
     }

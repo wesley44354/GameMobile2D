@@ -61,8 +61,16 @@ public class EnemyAIController : MonoBehaviour
 
     private void Update()
     {
-        enemyMovement.ProcessMovementInput(movementInput);
-        enemyFacing.UpdateFacing(movementInput);
+        if (isAttacking)
+        {
+            enemyMovement.StopImmediately();
+        }
+        else
+        {
+            enemyMovement.ProcessMovementInput(movementInput);
+            enemyFacing.UpdateFacing(movementInput);
+
+        }
     }
 
     private void OnDamage()
@@ -87,19 +95,19 @@ public class EnemyAIController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.collider.tag == "Player" && !collision.collider.isTrigger)
+        if(collision.collider.tag == "Player")
             onCollisionEnter2D = true;
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.collider.tag == "Player" && !collision.collider.isTrigger)
+        if (collision.collider.tag == "Player")
             onCollisionEnter2D = true;
     }
 
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.collider.tag == "Player" && !collision.collider.isTrigger)
+        if (collision.collider.tag == "Player")
             onCollisionEnter2D = false;
     }
 }
