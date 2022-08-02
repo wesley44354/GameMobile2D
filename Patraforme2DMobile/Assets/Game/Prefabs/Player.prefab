@@ -384,5 +384,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  onTriggerEnter2D: 0
   attackTime: 0.2

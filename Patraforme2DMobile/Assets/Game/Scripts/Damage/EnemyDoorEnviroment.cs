@@ -5,24 +5,31 @@ using UnityEngine;
 
 
 [RequireComponent(typeof(IDamageable))]
-public class DeathOnDamageInEnviroment : MonoBehaviour
+public class EnemyDoorEnviroment : MonoBehaviour
 {
 
     IDamageable damageable;
+    DeathOnDamage deathOnDamage;
     Animator animator;
+
+
+    [SerializeField] HealthBar healthBar;
 
 
     private void Start()
     {
         damageable = GetComponent<IDamageable>();
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
+        deathOnDamage = GetComponent<DeathOnDamage>();
 
+        healthBar.SetMaxHealth(deathOnDamage.Lives);
         damageable.DamageEvent += OnDamage;
         damageable.TookDamageEvent += OnTookDamage;
     }
 
     private void OnTookDamage()
     {
+        healthBar.SetHealth(deathOnDamage.Lives);
         animator.SetTrigger(CharacterMovementAnimationKeys.tookDamage);
     }
 
