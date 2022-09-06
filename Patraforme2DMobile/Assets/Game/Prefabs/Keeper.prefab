@@ -253,6 +253,7 @@ GameObject:
   - component: {fileID: 1262287691}
   - component: {fileID: 537702334}
   - component: {fileID: 768991790}
+  - component: {fileID: 1697905485}
   m_Layer: 0
   m_Name: Keeper
   m_TagString: Enemy
@@ -350,7 +351,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63b3002d32afb3240bde30388ccf19a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onCollisionEnter2D: 0
 --- !u!114 &3895311859456431387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -445,6 +445,7 @@ MonoBehaviour:
     - {fileID: 1262287691}
     - {fileID: 718320728}
     - {fileID: 1837063571}
+    - {fileID: 1697905485}
     objectParamsNames:
     - AIController
     - Target
@@ -452,6 +453,7 @@ MonoBehaviour:
     - AIVision
     - TriggerDamage
     - Weapon
+    - CheckTargetOnTrigger
     objectParamsLostDefaultValue: 
     layerMaskParams: []
     layerMaskParamsNames: []
@@ -482,3 +484,16 @@ MonoBehaviour:
     quaternionParams: []
     quaternionParamsNames: []
     quaternionParamsLostDefaultValue: 
+--- !u!114 &1697905485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3895311859456431388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82660668f320d674ca8a9b125d9a414a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onCollisionEnter2D: 0

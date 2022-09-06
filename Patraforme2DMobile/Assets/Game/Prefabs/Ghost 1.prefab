@@ -13,12 +13,9 @@ GameObject:
   - component: {fileID: 4332501256451277315}
   - component: {fileID: 4332501256451277316}
   - component: {fileID: 4332501256451277317}
+  - component: {fileID: 4332501256451277313}
   - component: {fileID: 4332501256451277312}
   - component: {fileID: 4332501256451277327}
-  - component: {fileID: 1761246625}
-  - component: {fileID: 6124294686026376626}
-  - component: {fileID: 5421081968900061242}
-  - component: {fileID: 3163290260143840734}
   m_Layer: 0
   m_Name: Ghost
   m_TagString: Untagged
@@ -115,46 +112,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63b3002d32afb3240bde30388ccf19a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4332501256451277312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4332501256451277319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f49c16a46d93b543abd3c49e3a32c95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &4332501256451277327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4332501256451277319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b9d760ac9f3c944aabfa527f273c52e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lives: 2
---- !u!114 &1761246625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4332501256451277319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c85aea6002892c49baa4309f7a421b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  visionRange: 10
-  visionAngle: 93
---- !u!114 &6124294686026376626
+  startPosition: {x: 0, y: 0}
+--- !u!114 &4332501256451277313
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -177,10 +136,8 @@ MonoBehaviour:
     boolParams: 
     boolParamsNames: []
     boolParamsLostDefaultValue: 
-    floatParams:
-    - 2
-    floatParamsNames:
-    - TimeReturnStartPosition
+    floatParams: []
+    floatParamsNames: []
     floatParamsLostDefaultValue: 
     stringParams: []
     stringParamsNames: []
@@ -191,17 +148,11 @@ MonoBehaviour:
     objectParams:
     - {fileID: 4332501256451277317}
     - {fileID: 4332501256451277316}
-    - {fileID: 5421081968900061242}
     - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 1761246625}
     objectParamsNames:
     - AIController
     - CharacterMovement
-    - CheckTargetOnTrigger
-    - target
-    - Target
-    - AIVision
+    - PositionToGo
     objectParamsLostDefaultValue: 
     layerMaskParams: []
     layerMaskParamsNames: []
@@ -232,7 +183,7 @@ MonoBehaviour:
     quaternionParams: []
     quaternionParamsNames: []
     quaternionParamsLostDefaultValue: 
---- !u!114 &5421081968900061242
+--- !u!114 &4332501256451277312
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -241,36 +192,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 4332501256451277319}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82660668f320d674ca8a9b125d9a414a, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f49c16a46d93b543abd3c49e3a32c95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onCollisionEnter2D: 0
---- !u!61 &3163290260143840734
-BoxCollider2D:
+--- !u!114 &4332501256451277327
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4332501256451277319}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b9d760ac9f3c944aabfa527f273c52e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lives: 2
 --- !u!1 &4332501256922517668
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,7 +21,6 @@ public class EnemyAIController : MonoBehaviour
 
     public bool tookDamage { get; private set; }
 
-    public bool onCollisionEnter2D;
 
     public bool IsChasing
     {
@@ -69,8 +68,9 @@ public class EnemyAIController : MonoBehaviour
         {
             enemyMovement.ProcessMovementInput(movementInput);
             enemyFacing.UpdateFacing(movementInput);
-
         }
+
+        Debug.Log(gameObject.transform.name + GetComponent<CheckTargetOnTrigger>().onCollisionEnter2D);
     }
 
     private void OnDamage()
@@ -90,24 +90,5 @@ public class EnemyAIController : MonoBehaviour
             damageable.DamageEvent -= OnDamage;
             damageable.TookDamageEvent -= OnTookDamage;
         }
-    }
-
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.collider.tag == "Player")
-            onCollisionEnter2D = true;
-    }
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        if (collision.collider.tag == "Player")
-            onCollisionEnter2D = true;
-    }
-
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.collider.tag == "Player")
-            onCollisionEnter2D = false;
     }
 }

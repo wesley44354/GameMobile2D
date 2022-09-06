@@ -60,7 +60,7 @@ TextureImporter:
       213: 2198027132570139386
     second: Skeleton Dead_18
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -77,10 +77,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -119,6 +121,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -158,6 +162,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -496,9 +512,24 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Skeleton Dead_6: 6466916566069523921
+      Skeleton Dead_9: -7914734902640995259
+      Skeleton Dead_18: 2198027132570139386
+      Skeleton Dead_3: -6944830649617365068
+      Skeleton Dead_4: -1970192786815392063
+      Skeleton Dead_1: -4556957111438124803
+      Skeleton Dead_2: 8229228023718284102
+      Skeleton Dead_17: 2310587260497813281
+      Skeleton Dead_8: -926204492896737425
+      Skeleton Dead_11: -6434160970422584577
+      Skeleton Dead_0: -2857231490776680268
+      Skeleton Dead_12: 4545027865677980425
+      Skeleton Dead_5: 2483693351843143494
+      Skeleton Dead_13: -6589485293158612270
+      Skeleton Dead_16: -5781592100170912744
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

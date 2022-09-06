@@ -8,12 +8,12 @@ using UnityEngine;
 public class IsColliderEnter : GOCondition
 {
 
-    [InParam("EnemyAiController")]
-    private EnemyAIController enemyAIController;
+    [InParam("CheckTargetOnTrigger")]
+    private CheckTargetOnTrigger checkTargetOnTrigger;
 
     public override bool Check()
     {
-        return enemyAIController.onCollisionEnter2D;
+        return checkTargetOnTrigger.onCollisionEnter2D;
     }
 
 }

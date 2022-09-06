@@ -183,7 +183,7 @@ TextureImporter:
       213: -8081740631317622508
     second: Dungeon1_59
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -200,10 +200,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -242,6 +244,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -293,6 +297,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -1585,9 +1601,69 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Tileset_Rock_FloorSingleBlockRight: -3214020013887970884
+      Tileset_Rock_FloorInside1: 6084181910151306011
+      Tileset_Rock_Floor_Left: 5127945985025483818
+      Tileset_Rock_Fillblack1: -6315629243169937073
+      Dungeon1_4: -8316864623394700221
+      Dungeon1_22: -6018078305295485042
+      Dungeon1_58: 3067548278438451585
+      Dungeon1_18: -7134589576231365050
+      Tileset_Rock_Fillblack0: -3171852898790939208
+      Tileset_Rock_Fillblack3: 8384500837016897067
+      Tileset_Rock_FloorSingleBlock: -7737457102544359403
+      Tileset_Rock_WallInsideLeft0: 2773502818933803946
+      Tileset_Rock_Fill6: 2335776488672700395
+      Tileset_Rock_Fill0: -9119744771623628170
+      Tileset_Rock_FloorCornerOuterRight: 3775088828492989452
+      Tileset_Rock_CeilingCornerOuterRight: 5841125812577583332
+      Tileset_Rock_Fillblack4: -8582006028623916185
+      Tileset_Rock_Ceiling_Left: 3549361070262079549
+      Tileset_Rock_Plataform: 8894256851220086511
+      Tileset_Rock_CeilingCornerOuterLeft: -2510928915325135585
+      Tileset_Rock_Fillblack5: -3408745916299532930
+      Tileset_Rock_Fill3: -4699935488949089943
+      Tileset_Rock_Ceiling_Right: -7474155633580668392
+      Tileset_Rock_Fill5: 6325221034391241994
+      Tileset_Rock_CeilingCornerOuterLeftInsede: -3012868704878983078
+      Tileset_Rock_FloorCornerOuterLeftInside: 638278476714730106
+      Dungeon1_5: -424935767654942266
+      Tileset_Rock_Fill8: -428181685804181366
+      Dungeon1_59: -8081740631317622508
+      Dungeon1_8: -3230697641494294105
+      Tileset_Rock_WallRight: -4418696415264868521
+      Dungeon1_26: -7895267580335433797
+      Tileset_Rock_Fill7: 3054426489606824333
+      Tileset_Rock_Fillblack2: -3519400927864668401
+      Tileset_Rock_Fillblack7: -2438852851090020894
+      Dungeon1_27: -7709005597328439393
+      Tileset_Rock_Fill2: -6999724768875235909
+      Tileset_Rock_CeilingCornerOuterRightInside: 5306523622356713066
+      Dungeon1_17: 987281739001786223
+      Tileset_Rock_WallInsideLeft1: 8684876281743669185
+      Tileset_Rock_CeilingInside0: -3885523921126635024
+      Tileset_Rock_Fill4: -5446832411504745518
+      Tileset_Rock_Fillblack6: 8837071126945520881
+      Tileset_Rock_CeilingInside1: -385873697585532400
+      Dungeon1_21: -6570963964425333347
+      Tileset_Rock_FloorSingleBlockLeft: -8927948562805968812
+      Dungeon1_6: -2510025011242301990
+      Tileset_Rock_FloorCornerOuterLeft: 5633595496526079969
+      Tileset_Rock_FloorInside0: -6734875551623697568
+      Tileset_Rock_FloorCornerOuterRightInside: 8143709045293848180
+      Dungeon1_12: -8121544172982774717
+      Tileset_Rock_Floor_Right: 4972237907058051051
+      Dungeon1_20: 4591177898029712188
+      Tileset_Rock_WallInsideRight1: -8268503996711762638
+      Tileset_Rock_Fill1: 2191938594237420687
+      Tileset_Rock_Floor: -187251043586072471
+      Tileset_Rock_Ceiling: 2514186836580232427
+      Dungeon1_11: -3553918297408517189
+      Tileset_Rock_WallLeft: -6089410434772780915
+      Tileset_Rock_WallInsideRight0: -4512510137357174785
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

@@ -28,9 +28,9 @@ public class Ghost : BasePrimitiveAction
 
     public override void OnStart()
     {
+        base.OnStart();
         charMovement.MaxGroundSpeed = chaseSpeed;
         aiController.StartCoroutine(TEMP_Walk());
-        base.OnStart();
     }
 
 
@@ -43,6 +43,10 @@ public class Ghost : BasePrimitiveAction
         aiController.StopAllCoroutines();
     }
 
+    public override TaskStatus OnUpdate()
+    {
+        return TaskStatus.RUNNING;
+    }
 
 
     IEnumerator TEMP_Walk()

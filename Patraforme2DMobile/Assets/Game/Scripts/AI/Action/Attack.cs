@@ -9,7 +9,7 @@ using UnityEngine;
 [Action("Game/Attack")]
 public class Attack : BasePrimitiveAction
 {
-
+    private const string ENEMY_ATTACK = "EnemyAttack";
 
     [InParam("TriggerDamage")]
     private GameObject triggerDamage;
@@ -48,6 +48,7 @@ public class Attack : BasePrimitiveAction
         aiController.IsAttacking = true;
         yield return new WaitForSeconds(attackTime);
         triggerDamage.gameObject.SetActive(true);
+        AudioManager.instance.PlaySound(ENEMY_ATTACK);
         yield return new WaitForSeconds(attackTime);
         triggerDamage.gameObject.SetActive(false);
         weapon.gameObject.SetActive(false);
